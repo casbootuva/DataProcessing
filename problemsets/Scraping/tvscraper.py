@@ -27,17 +27,17 @@ def extract_tvseries(dom):
     '''
 
     #print dom.body.content
-    genrestring =""
-    actorstring =""
-    tvlist = []
-    row = []
+    genrestring ="" #empty string that will contain genre of tv show.
+    actorstring ="" #empty string that will contain actors in tv show.
+    tvlist = [] # list that will contain information about all tv shows.
+    row = [] # list that will contain information about individual tv shows.
 
     for e in dom.by_tag("tr.detailed")[:50]: # tr. detailed contains all information about the show
         row = []
-        genrestring =""
-        actorstring =""
+        genrestring = "" # empty string
+        actorstring = "" # empty string
         for a in e.by_tag("td.title"): # td title contains title, genre and actors.
-            for j in a.by_tag("a")[:1]: # refers to title.
+            for j in a.by_tag("a")[: 1]: # refers to title.
                 row.append(str(j[0]))
             for b in e.by_tag("td.number")[:1]: # refers to rank
                 row.append(str(b[0]))
@@ -45,15 +45,15 @@ def extract_tvseries(dom):
                 for h in c.by_tag("a"):  # refers to entries in genre span.  
                     genrestring += str(h[0]) # adds the genre to genre list
                     genrestring += ", " #adds a comma and space in between the genre
-                genrestring = genrestring[:-2] # makes sure last comma and space are deleted
-                row.append(genrestring)
+                genrestring = genrestring[: -2] # makes sure last comma and space are deleted
+                row.append(genrestring) # append genre to row string.
             for l in a.by_tag("span.credit"): # refers to the span that contains the actors
                 for m in l.by_tag("a"):   # refers to entries within credit span. 
                     actorstring += str(m[0]) # adds actors to string.
                     actorstring += ", "   # adds a comma and space in between.
-                actorstring = actorstring[:-2] # chopps off lost comma and space.
-                row.append(actorstring)
-        tvlist.append(row)
+                actorstring = actorstring[: -2] # chopps off lost comma and space.
+                row.append(actorstring) # append actors to row list.
+        tvlist.append(row) # append individual movie list to list containing information about all movies.
     return tvlist        
 
     # ADD YOUR CODE HERE TO EXTRACT THE ABOVE INFORMATION ABOUT THE

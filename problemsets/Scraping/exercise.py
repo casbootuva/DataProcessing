@@ -22,20 +22,31 @@ def split_string(source, separators):
 
 	i = 0
 	j = 0
+
 	while True:
+		# check if its the last character of the source
 		if i == len(source):
-			if source[len(source)-1] in separators:
-				split_value.append(source[j:len(source)])
+			
+			# check if its a separator
+			if source[len(source) - 1] in separators:
+				split_value.append(source[j : len(source)])
 				break
 			else:
-				split_value.append(source[j:len(source)])
+				split_value.append(source[j : len(source)])
 				break
+		# check if its separator
 		if source[i] in separators:
-			split_value.append(source[j:i])
-			i+=1
-			j=i
+			
+			# append till the seperator
+			split_value.append(source[j : i])
+			
+			# update iterator variables
+			i += 1
+			j = i
 		else:
-			i+=1
+			i += 1
+	
+	# delete empty strings from list
 	split_value = filter(None, split_value)
 
 		
