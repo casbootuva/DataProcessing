@@ -68,7 +68,7 @@ def save_csv(f, tvlist):
     '''
     writer = csv.writer(f)
     writer.writerow(['Title', 'Ranking', 'Genre', 'Actors', 'Runtime'])
-    for row in tvlist:
+    for row in tvlist: #write to csv file
         writer.writerow(row)
 
     

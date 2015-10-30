@@ -50,7 +50,7 @@ def split_string(source, separators):
 	split_value = filter(None, split_value)
 
 		
-	print split_value
+	return split_value
 
 
 
