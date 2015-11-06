@@ -39,6 +39,7 @@ def extract_tvseries(dom):
         for a in e.by_tag("td.title"): # td title contains title, genre and actors.
             for j in a.by_tag("a")[: 1]: # refers to title.
                 row.append(str(j[0]))
+                print j
             for b in e.by_tag("td.number")[:1]: # refers to rank
                 row.append(str(b[0]))
             for c in a.by_tag("span.genre"): # refers to span that contains genre.

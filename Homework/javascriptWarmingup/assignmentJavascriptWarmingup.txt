@@ -1,0 +1,55 @@
+# JavaScript
+
+The homeworks of coming weeks are about JavaScript. JavaScript is the only programming language that is supported by
+all modern web browsers and it is the least intrusive way of adding 
+interactive elements to a web page as it requires no plug-ins or other
+special extensions. We will be using JavaScript to implement a number of
+interactive visualizations.
+
+For this course we will be using the book [Eloquent JavaScript] by 
+Marijn Haverbeke. This book assumes very little programming background but
+goes into sufficient detail for our purposes. It is furthermore available
+freely from the publisher's web site. 
+
+Modern web browsers support two ways of creating graphics, the 
+canvas-element provides raster graphics and Scalable Vector
+Graphics (SVG) provide vector graphics. Raster graphics are specified as
+a grid of colored image elements and vector graphics are specified as
+a collection of shapes. Raster graphics become blurry (or show large
+pixels) when they are enlarged while vector graphics remain sharp. We will
+use both techniques to create visualizations.
+
+[Eloquent JavaScript]: http://eloquentjavascript.net/
+
+# JavaScript warming-up
+
+## Reading Assignment and Resources
+
+Read chapters 1 through 5 and chapters 12 and 13 of [Eloquent 
+JavaScript]. The first few chapters should be a quick read and the later chapters
+explain how JavaScript integrates in the browser and how the Document
+Object Model (DOM) is used from JavaScript. The Mozilla Developer 
+Network [MDN] contains up-to-date information on client-side web technologies (i.e. about HTML,
+CSS and JavaScript) and can serve as a reference. 
+
+[MDN]: https://developer.mozilla.org
+
+## Questions
+Answer the following questions in your own words. This assignment will
+only be graded pass or fail.
+
+* Explain the difference between the == operator and the === operator.
+* Explain what a closure is. (Note that JavaScript programs use closures very often.)
+* Explain what higher order functions are.
+* Explain what a query selector is and give an example line of JavaScript that uses a query selector.
+
+## Warming-up exercise
+This exercise come with supplementary files which you can download [here](javascriptWarmingup.zip).
+Find 'script.js' file and follow the instructions. 
+
+## Checks before submitting
+
+* Did you create a folder Javascript in your repo?
+* Does your submission contain a PDF with the answers to the 
+          questions in Section "Questions" and implementation of the warming-up exercises?
+
